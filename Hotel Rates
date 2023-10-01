@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+
+  static void myMethod() {
+    System.out.println("Method Working.");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+    Scanner scrn = new Scanner(System.in);
+    int hotelRate;
+    int numYears;
+
+    hotelRate = 150;
+    System.out.print("Enter years married: ");
+    numYears = scrn.nextInt();
+
+    if (numYears>=50) {
+      System.out.print("Congrats on " + numYears);
+      System.out.println(" years of marriage!");
+
+      hotelRate = (hotelRate/2);
+    }
+
+    System.out.print("Your hotel rate: $");
+    System.out.println(hotelRate);
+  }
+}
