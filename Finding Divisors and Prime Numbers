@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scrn = new Scanner(System.in);
+    System.out.print("Enter a number:");
+    int userNumber = scrn.nextInt();
+    int divisorCount = 0;
+    
+    System.out.println("Divisors:");
+    for (int i = userNumber; i > 0; --i) {
+      if (userNumber%i == 0) {
+        System.out.print(i + ", ");
+        ++divisorCount;
+      }
+    }
+    System.out.println();
+
+    String primeNumText = (divisorCount > 2) ? " is not a prime number.": " is a prime number!";
+    System.out.println(userNumber + primeNumText);
+  }
+}
