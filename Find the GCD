@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Let's find the GCD of two numbers!");
+    
+    System.out.print("Enter your first number:");
+    int Number1 = input.nextInt();
+    
+    System.out.print("Enter your next number:");
+    int Number2 = input.nextInt();
+    
+    int[] store = {Number1, Number2};
+    
+    while (Number1 != Number2) {
+      if (Number1 > Number2) {
+        Number1 -= Number2;
+      } else{
+        Number2 -= Number1;
+      }
+    }
+    
+    System.out.println("The GCD of "+ store[0] + " and " + store[1] + " is " + Number1 + "!");
+  }
+}
