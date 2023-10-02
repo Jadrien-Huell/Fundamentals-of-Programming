@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Enter your score for your grade:");
+    Scanner input = new Scanner(System.in);
+    int score = input.nextInt();
+    char grade = 'A';
+
+    for (int i = 1; i < 5; ++i) {
+      int bracket = 100 - i*10;
+      if (score >= bracket || score < 60) {
+        if (grade == 'E' || score < 60) {
+          grade = 'F';
+          System.out.println(grade);
+        } else {
+          System.out.println(grade);
+        }
+        break;
+      } else {grade++;}
+    }
+  }
+}
