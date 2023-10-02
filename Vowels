@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+    Scanner input = new Scanner(System.in);
+    System.out.println("Please enter a letter to determine if it is a vowel:");
+
+    String letter = input.next();
+  
+    switch(letter.toLowerCase()) {
+      case "a": System.out.println(letter + " is a vowel!"); 
+        break;
+      case "e": System.out.println(letter + " is a vowel!"); 
+        break;
+      case "i": System.out.println(letter + " is a vowel!");
+        break;
+      case "o": System.out.println(letter + " is a vowel!");
+        break;
+      case "u": System.out.println(letter + " is a vowel!");
+        break;
+      default : System.out.println(letter + "is a consonant!");
+        break;
+    }
+    
+  }
+}
