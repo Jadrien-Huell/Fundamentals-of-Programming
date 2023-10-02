@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+    System.out.println("Finding the sum, average, and largest of three numbers.\n" + "Enter 3 numbers:");
+    Scanner input = new Scanner(System.in);
+    
+    int A = input.nextInt();
+    int B = input.nextInt();
+    int C = input.nextInt();
+
+    int largestNumber = A;
+    double sum = A+B+C;
+    double average = sum/3;
+
+    // >> SUM <<
+    System.out.println("The sum of " + A + ", " + B +  ", and " + C + " is "+ sum);
+
+    // >> AVERAGE <<
+    System.out.println("The average of " + A + ", " + B +  ", and " + C + " is "+ average);
+
+    // >> LARGEST <<
+      // if B is larger than the variable then the variable will be set to B
+    if (largestNumber < B) {largestNumber = B;}
+      // if C is larger than the variable then the variable will be set to C
+    if (largestNumber < C) {largestNumber = C;}
+      
+    System.out.println("The largest of " + A + ", " + B +  ", and " + C + " is "+ largestNumber);
+  }
+}
